@@ -1,0 +1,169 @@
+{
+    "projects": [
+        {
+            "id": "1",
+            "slug": "a_monument_to_uncle_nelson",
+            "title": "A Monument to Uncle Nelson",
+            "description": [
+                "An investigation and deconstruction of the concept of \"monument\" through a highly personal context- the story of my uncle Nelson's death in an aviation accident in 1983.", 
+                "Graduation show Rietveld Academie 2013. Installation"
+            ],
+            "slides": [
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/nelson/text.png"
+                },
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/nelson/1.jpg"
+                },
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/nelson/2.jpg"
+                },
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/nelson/3.jpg"
+                },
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/nelson/4.jpg"
+                },
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/nelson/5.jpg"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "slug": "boeing_737-200",
+            "title": "Boeing 737- 200",
+            "description": [
+                
+            ],
+            "slides": [
+                {
+                    "label": "inkjet print, 107x182CM found images collage.",
+                    "type": "image",
+                    "url": "images/boeing/1.jpg"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "slug": "ptsd",
+            "title": "PTSD",
+            "description": [
+                "Installation consisted of three separate looping videos. Mundane executions through post traumatic stress disorder.2012"
+            ],
+            "slides": [
+                {
+                    "label": "",
+                    "type": "vimeo",
+                    "vimeoId": "118151143"
+                },
+                {
+                    "label": "",
+                    "type": "vimeo",
+                    "vimeoId": "118164601"
+                },
+                {
+                    "label": "",
+                    "type": "vimeo",
+                    "vimeoId": "118163070"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "slug": "red_therapy_for_red_objects",
+            "title": "Red Therapy for Red Objects",
+            "description": [
+                "Based on the theory of Art Therapy and the effects of long term exposure to the color red.",
+                "Found footage of Red Color Sound Therapy"
+            ],
+            "slides": [
+                {
+                    "label": "",
+                    "type": "vimeo",
+                    "vimeoId": "118175194"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "slug": "012",
+            "title": "012",
+            "description": [
+            ],
+            "slides": [
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/012/1.jpg"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "slug": "012-1",
+            "title": "012-1",
+            "description": [
+            ],
+            "slides": [
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/012-1/1.jpg"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "slug": "cornish_new_hampshire",
+            "title": "Cornish, New Hampshire",
+            "description": [
+                "Series based on The Catcher in The Rye and the consequences it brought upon its author.",
+                "Homage to J.D. Sallinger."
+            ],
+            "slides": [
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/cornish/1.jpg"
+                },
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/cornish/4.jpg"
+                },
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/cornish/6.jpg"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "slug": "pan",
+            "title": "PAN",
+            "description": [
+            ],
+            "slides": [
+                {
+                    "label": "",
+                    "type": "image",
+                    "url": "images/pan/1.jpg"
+                }
+            ]
+        }
+    ]
+}

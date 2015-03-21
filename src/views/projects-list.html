@@ -1,0 +1,21 @@
+<div class="menu-projects-container">
+    <ul id="menu-projects" class="nav-menu">
+        <li class="menu-item">010 - 013
+            <ul class="projects-menu">
+                {% for project in projects %}<li class="project-list-item">
+                    <h5>
+                        <a data-role="project-title" href="/projects/{{proj.slug}}">
+                            {{project.title}}
+                        </a>
+                    </h5>
+
+                    <div class="description" ng-class="proj.active">
+                        {% for line in project.description %}<div>
+                            {{line}}
+                        </div>{% endfor %}
+                    </div>
+                </li>{% endfor %}
+            </ul>
+        </li>
+    </ul>
+</div>

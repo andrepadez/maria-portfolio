@@ -23,7 +23,7 @@ ApplicationView.prototype.render = function(wrapper, locals){
 //we cache all the DOM elements we'll use later
 var registerDOM = function(){
     $scope.$DOM = {
-
+        projectsList: document.getElementById('projects-list')
     };
 };
 
