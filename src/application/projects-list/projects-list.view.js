@@ -23,16 +23,15 @@ ProjectsListView.prototype.render = function(wrapper, locals){
 //we cache all the DOM elements we'll use later
 var registerDOM = function(){
     $scope.$DOM = {
-        //projectListItems: Array.prototype.slice.call( $scope.$wrapper.getElementsByTagName('a') )
     };
 };
 
 var registerBehaviour = function(){
-    var mouseoverTimeout, mouseoutTimeout;
     $scope.$wrapper.addEventListener('click', function(ev){
         var target = ev.target;
-        if(target.nodeName.toLowerCase() === 'a'){
+        if(target.dataset.project){
             ev.preventDefault();
+            $scope.broadcast('project changed', { slug: target.dataset.project });
         }
     });
 };
