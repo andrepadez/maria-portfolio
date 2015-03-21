@@ -1,7 +1,7 @@
 {
-  "name": "your-application-name-here",
+  "name": "maria-portfolio",
   "version": "0.0.0",
-  "description": "",
+  "description": "Portfolio Website for Maria Ogliastri",
   "main": "src/application/application.controller.js",
   "scripts": {
     "test": "testem ci"
