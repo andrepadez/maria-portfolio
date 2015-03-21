@@ -13,6 +13,9 @@ ProjectsList.prototype.init = function(parentScope, config, wrapper){
     return view.init(this);
 };
 
-ProjectsList.prototype.broadcast = function(message, data){
-    pubsub.broadcast(message, data);
+ProjectsList.prototype.changeProject = function(projectID){
+    var project = this.projects.filter(function(item){
+        return item.id === projectID;
+    }).shift();
+    pubsub.broadcast( 'project changed', { project: project } );
 };

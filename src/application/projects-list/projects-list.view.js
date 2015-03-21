@@ -31,7 +31,7 @@ var registerBehaviour = function(){
         var target = ev.target;
         if(target.dataset.project){
             ev.preventDefault();
-            $scope.broadcast('project changed', { slug: target.dataset.project });
+            $scope.changeProject(target.dataset.project);
         }
     });
 };
