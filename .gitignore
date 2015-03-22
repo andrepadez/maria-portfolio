@@ -4,4 +4,3 @@ dist/
 testem.log
 npm-debug.log
 *.iml
-src/layout.scss
