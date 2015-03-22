@@ -12,9 +12,21 @@ Application.prototype.init = function(config, wrapper){
     this.$wrapper = wrapper || document.body;
     return view.init(this)
         .then( projectsList.init.bind(projectsList, this, this.$config.projects) )
-        .then( projectDisplay.init.bind(projectsList, this) );
+        .then( projectDisplay.init.bind(projectsList, this) )
+        .then( view.renderPage.bind(view, 'about') );
 };
 
-Application.prototype.broadcast = function(message, data){
-    pubsub.broadcast(message, data);
+Application.prototype.hashChanged = function(hash){
+    var path = ( hash || window.location.hash ).replace('#/', '').split('/');
+    var action = path.shift();
+
+    switch( action ){
+        case 'about':
+        case 'contact':
+            view.renderPage( action );
+            break;
+        case 'project':
+            projectsList.changeProject( path.shift() );
+            break;
+    }
 };

@@ -12,32 +12,37 @@
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/nelson/text.png"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/text.png"
                 },
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/nelson/1.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/1.jpg"
                 },
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/nelson/2.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/2.jpg"
                 },
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/nelson/3.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/3.jpg"
                 },
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/nelson/4.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/4.jpg"
                 },
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/nelson/5.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/5.jpg"
+                }, 
+                {
+                    "label": "",
+                    "type": "mp3",
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/Trupapa+Trupapa.mp3"
                 }
             ]
         },
@@ -52,7 +57,7 @@
                 {
                     "label": "inkjet print, 107x182CM found images collage.",
                     "type": "image",
-                    "url": "images/boeing/1.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/boeing/1.jpg"
                 }
             ]
         },
@@ -107,7 +112,7 @@
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/012/1.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/012/1.jpg"
                 }
             ]
         },
@@ -121,7 +126,7 @@
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/012-1/1.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/012-1/1.jpg"
                 }
             ]
         },
@@ -137,17 +142,17 @@
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/cornish/1.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/cornish/1.jpg"
                 },
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/cornish/4.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/cornish/4.jpg"
                 },
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/cornish/6.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/cornish/6.jpg"
                 }
             ]
         },
@@ -161,7 +166,7 @@
                 {
                     "label": "",
                     "type": "image",
-                    "url": "images/pan/1.jpg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/pan/1.jpg"
                 }
             ]
         }

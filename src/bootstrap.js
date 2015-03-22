@@ -7,6 +7,10 @@ var CONFIGURATION_URL = 'http://localhost:3001/get-configuration';
 
 ajax.getJSON( CONFIGURATION_URL )
 	.then( application.init.bind(application) )
+    .then( function(){
+        var hash = window.location.hash || 'about';
+        application.hashChanged(hash);
+    })
 	.then (
 		function(){ console.log('application started successfully'); },
 		function(err){ console.error(err.stack); }

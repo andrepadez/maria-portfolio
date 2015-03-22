@@ -1,3 +1,11 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
@@ -24,5 +32,36 @@ li {
 		&:hover > .description{
 			display: block;
 		}
+	}
+}
+
+.project-container {
+	white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    height: 100%;
+	.slide {
+	    margin-right: 10px;
+	    height: 90%;
+	    display: inline-block;
+
+	    .slide-img, iframe {
+	        height: 90%;
+	    }
+	    iframe {
+
+	    }
+
+	    label {
+	        display: block;
+	    }
+	}
+
+	.paging {
+	    text-align: center;
+	    span {
+	        margin-right: 3px;
+	    }
 	}
 }

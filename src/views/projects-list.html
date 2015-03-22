@@ -4,12 +4,12 @@
             <ul class="projects-menu">
                 {% for project in projects %}<li class="project-list-item">
                     <h5>
-                        <a href="#" data-project="{{project.id}}" href="#">
+                        <a href="#/project/{{project.slug}}" href="#">
                             {{project.title}}
                         </a>
                     </h5>
 
-                    <div class="description" ng-class="proj.active">
+                    <div class="description">
                         {% for line in project.description %}<div>
                             {{line}}
                         </div>{% endfor %}

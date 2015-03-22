@@ -24,7 +24,11 @@ var registerNotificationInterests = function(){
 var notificationHandler = function(message, payload){
     switch(message){
         case 'project changed':
-            view.renderProject( payload.project );
+            view.renderProject( payload.project )
+                .then(
+                    function(){},
+                    function(err){ console.error(err.stack); }
+                );
             break;
     }
 };

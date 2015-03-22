@@ -20,6 +20,10 @@ ApplicationView.prototype.render = function(wrapper, locals){
     return templator.render('main.html', locals, wrapper);
 };
 
+ApplicationView.prototype.renderPage = function(page){
+    return templator.render(page + '.html', null, $scope.$DOM.projectContainer);
+};
+
 //we cache all the DOM elements we'll use later
 var registerDOM = function(){
     $scope.$DOM = {
@@ -29,5 +33,8 @@ var registerDOM = function(){
 };
 
 var registerBehaviour = function(){
-    
+    window.addEventListener('hashchange', function(ev){
+        ev.preventDefault();
+        $scope.hashChanged();
+    });
 };

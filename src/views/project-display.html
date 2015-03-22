@@ -1,1 +1,16 @@
-<h1>Project Display</h1>
+<div>
+    <div>
+        {% for slide in project.slides %}<div class="slide">
+            {% if slide.type === 'vimeo' %}
+                <h3>slide</h3>
+            {% elseif slide.type === 'image' %}
+                <img ng-switch-when="image" class="slide-img" src="{{slide.url}}" alt="{{slide.label}}">
+                <label>{{slide.label}} {{data}}</label>
+            {% endif %}
+
+            <!-- <iframe ng-switch-when="vimeo" src="{{getIframeSrc(slide.vimeoId)}}" frameborder="0" 
+                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+            <!--  -->
+        </div>{% endfor %}
+    </div>
+</div>
