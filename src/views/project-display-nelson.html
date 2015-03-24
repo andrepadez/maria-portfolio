@@ -1,0 +1,15 @@
+<div>
+    <div>
+        {% for slide in project.slides %}
+            <div class="slide">
+                {% if slide.type === 'vimeo' %}
+                    <iframe src="//player.vimeo.com/video/{{slide.vimeoId}}" frameborder="0" 
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                {% elseif slide.type === 'image' %}
+                    <img class="slide-img" src="{{slide.url}}" alt="{{slide.label}}">
+                    <label>{{slide.label}} {{data}}</label>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>

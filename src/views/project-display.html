@@ -2,15 +2,18 @@
     <div>
         {% for slide in project.slides %}<div class="slide">
             {% if slide.type === 'vimeo' %}
-                <h3>slide</h3>
+                <iframe src="//player.vimeo.com/video/{{slide.vimeoId}}" frameborder="0" 
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             {% elseif slide.type === 'image' %}
-                <img ng-switch-when="image" class="slide-img" src="{{slide.url}}" alt="{{slide.label}}">
+                <img class="slide-img" src="{{slide.url}}" alt="{{slide.label}}">
                 <label>{{slide.label}} {{data}}</label>
+            {% elseif slide.type === 'mp3' %}
+                <audio controls preload="none" style="width:480px;">
+                    <source src="{{slide.m4a}}" type="audio/mp4" />
+                    <source src="{{slide.ogg}}" type="audio/ogg" />
+                    <p>Your browser does not support HTML5 audio.</p>
+                </audio>
             {% endif %}
-
-            <!-- <iframe ng-switch-when="vimeo" src="{{getIframeSrc(slide.vimeoId)}}" frameborder="0" 
-                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-            <!--  -->
         </div>{% endfor %}
     </div>
 </div>
