@@ -21,7 +21,8 @@ ApplicationView.prototype.render = function(wrapper, locals){
 };
 
 ApplicationView.prototype.renderPage = function(page){
-    return templator.render(page + '.html', null, $scope.$DOM.projectContainer);
+    return templator.empty($scope.$DOM.projectContainer)
+        .then( templator.render.bind(templator, page + '.html', null, $scope.$DOM.projectContainer) )
 };
 
 //we cache all the DOM elements we'll use later
