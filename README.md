@@ -1,34 +1,26 @@
-# OET - Module - Boilerplate
+# Maria Portfolio
 
-## Full solution for bootstrapping a new module
+## Requirements
+* node.js + NPM 
+* grunt - npm install -g grunt-cli
+* ruby compass - gem install compass
+* nodemon - npm install -g nodemon
+
+## Automation
 * Grunt for automation
 * browserify for commonjs style require and module.exports
 * sass compiling
 * BrowserSync and grunt-watch for serving and live-reload (with re-compilation)
 * testem framework with Mocha and Chai  
-* includes ARC and the oet-online-editor-module css and assets for wysiwyg development
-* includes oet-lib with basic tools to help you develop
+* includes organic-lib with basic tools to help you develop
 
 ## Usage
 
 ### installation
-create a new private repo in the albumprinter namespace;  
-http://github.com/albumprinter/oet-new-module  
-get the repo
 ```
-git clone git@github.com:albumprinter/oet-module-boilerplate.git new-module
-cd new-module
-git init
-git remote add origin git@github.com:albumprinter/oet-new-module.git
-* change the application name in package.json to "oet-new-module"
-* give a proper description
-* change main to "src/new-module/new-module-controller.js"
+git clone git@github.com:andrepadez/maria-portfolio
+cd maria-portfolio
 npm install
-```
-run the tests
-```
-npm install -g testem
-testem
 ```
 run development server
 ```
@@ -40,26 +32,13 @@ All the module logic goes into the src/ folder
 if you want to add specific CSS to the module start in src/css/main.scss  
 all the views, including sub-module's views, should be in src/views  
 ##### use src/bootstrap.js to bootstrap the module 
-this file won't be used when an application is requiring the module  
-here you should mock some configuration if needed in src/config
-```javascript
-var newModule = require('./new-module/new-module.controller.js');  
-var config = require('./config/mock-configuration.json');
-//here we don't init the templator because we're not compiling views while developing modules
-
-newModule.init(config)
-    .then(
-        function(){ console.log('module bootstrapped correctly'); },
-        function(err) { console.log(err.stack) };
-    );
-```
 
 #### there's a controller and view:
 ###### src/new-module/new-module.controller.js
 responsible for any communication to the outside world  manages the view and passes itself as a $scope to the view on initiation  
 only communicates through messages, knows nothing about outside scope
 ```javascript
-var pubsub = require('oet-lib/pubsub');
+var pubsub = require('organic-lib/pubsub');
 var view = require('./module-name.view');
 
 var NewModule = function(){};
