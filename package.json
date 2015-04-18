@@ -4,6 +4,7 @@
   "description": "Portfolio for Maria Ogliastri",
   "main": "server/index.js",
   "scripts": {
+    "post_install": "git remote add heroku https://git.heroku.com/morning-reaches-9445.git",
     "start": "node server/index.js"
   },
   "devDependencies": {

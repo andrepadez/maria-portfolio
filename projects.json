@@ -4,6 +4,53 @@
         "phone": "+31642079883",
         "email": "info@mariagraciaogliastri.com"
     },
+    "exhibitions": {
+        "group": [
+            {
+              "name": "THE ULTIMATE PERFORMANCE",
+              "location": "GERRIT RIETVELD ACADEMIE",
+              "date": "13.12.12 - 16.12.12"
+            },
+            {
+              "name": "POP-UP BOOKSTORE",
+              "location": "GALERIE DE SCHANS",
+              "date": "19.10.12 - 21.10.12"
+            },
+            {
+              "name": "TRANSMIT",
+              "location": "P///////AKT AMSTERDAM",
+              "date": "02.06.12 - 07.06.12"
+            },
+            {
+              "name": "TRANSMIT",
+              "location": "SINT LUCAS BRUSSEL",
+              "date": "07.05.12 - 12.05.12"
+            },
+            {
+              "name": "FOTO EXPOSITIE DE SCHANS",
+              "location": "GALERIE DE SCHANS AMSTERDAM",
+              "date": "06.04.12 - 09.04.12"
+            },
+            {
+              "name": "DE KUNSTENAAR EN ZIJN COLLECTIE",
+              "location": "ARTI ET AMICITIAE",
+              "date": "27.05.11 - 16.07.11"
+            },
+            {
+              "name": "TEENAGE MAGAZINES",
+              "location": "FOAM AMSTERDAM",
+              "date": "11.03.11 - 24.03.11"
+            }
+        ],
+        "solo": [] 
+    },
+    "education": [
+        {
+            "school": "Gerrit Rietveld Academie",
+            "degree": "Bachelor of Fine Arts",
+            "date": "2008- 2013"
+        }
+    ],
     "projects": [
         {
             "id": "1",

@@ -1,1 +1,41 @@
-<h1>About</h1>
+<header class="about">
+  <h1>Maria Gracia Ogliastri</h1>
+  <h2>About</h2>
+</header>
+
+<section class="education">
+  <h3>Education</h3>
+  {% for course in education %}
+    <article>
+      <span class="school">{{course.school}}. </span>
+      <span class="degree">{{course.degree}}. </span>
+      <span class="date">{{course.date}}.</span>
+    </article>
+  {% endfor %}
+</section>
+
+{% if exhibitions.solo.length > 0 %}
+<section class="education">
+  <h3>Group Exhibitions</h3>
+  {% for exhibition in exhibitions.solo %}
+    <article>
+      <div class="name">{{exhibition.name}}</div>
+      <div class="location">{{exhibition.location}}</div>
+      <div class="date">{{exhibition.date}}</div>
+    </article>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if exhibitions.group.length > 0 %}
+<section class="education">
+  <h3>Group Exhibitions</h3>
+  {% for exhibition in exhibitions.group %}
+    <article>
+      <div class="name">{{exhibition.name}}</div>
+      <div class="location">{{exhibition.location}}</div>
+      <div class="date">{{exhibition.date}}</div>
+    </article>
+  {% endfor %}
+</section>
+{% endif %}
