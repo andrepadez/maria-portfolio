@@ -2,10 +2,10 @@ var express = require('express');
 var configManager = require('./configuration-manager');
 
 var app = express();
-var port = 3001;
+app.set('port', (process.env.PORT || 3001));
 
-app.listen(port, function(){
-	console.log('listening on port ', port);
+app.listen( app.get('port'), function(){
+	console.log('listening on port ', app.get('port'));
 });
 
 app.use(function(req, res, next) {

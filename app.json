@@ -1,0 +1,7 @@
+{
+  "name": "maria-ogliastri-portfolio",
+  "description": "Portfolio for Maria Ogliastri",
+  "repository": "git@github.com:andrepadez/maria-portfolio.git",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"]
+}

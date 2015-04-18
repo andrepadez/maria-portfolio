@@ -1,13 +1,11 @@
 {
-  "name": "maria-portfolio",
-  "version": "0.0.0",
-  "description": "Portfolio Website for Maria Ogliastri",
-  "main": "src/application/application.controller.js",
+  "name": "maria-ogliastri-portfolio",
+  "version": "0.1.0",
+  "description": "Portfolio for Maria Ogliastri",
+  "main": "server/index.js",
   "scripts": {
-    "test": "testem ci"
+    "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "bootstrap": "^3.3.2",
     "chai": "^1.9.1",
@@ -27,6 +25,19 @@
     "swig": "^1.4.2"
   },
   "dependencies": {
-    "express": "^4.12.2"
-  }
+    "express": "^4.12.3"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:andrepadez/maria-portfolio.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
