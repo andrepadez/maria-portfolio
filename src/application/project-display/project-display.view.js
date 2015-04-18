@@ -18,13 +18,18 @@ ProjectDisplayView.prototype.renderProject = function(project){
     var locals = {
         project: project
     };
-    var templateURL = project.title !== 'A Monument to Uncle Nelson'? 
+    var isUncleNelson = project.title !== 'A Monument to Uncle Nelson';
+    var templateURL = isUncleNelson? 
       'project-display.html': 'project-display-nelson.html';
 
     return templator.empty($scope.$wrapper)
         .then( templator.render.bind(templator, templateURL, locals, $scope.$wrapper) )
         .then( registerDOM )
-        .then( changeSlide.bind(null, 1) );
+        .then( function(){
+          if(isUncleNelson){
+            changeSlide.bind(1); 
+          }
+        });
 };
 
 //we cache all the DOM elements we'll use later
