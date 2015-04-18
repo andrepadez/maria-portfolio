@@ -25,7 +25,8 @@
     "swig": "^1.4.2"
   },
   "dependencies": {
-    "express": "^4.12.3"
+    "express": "^4.12.3",
+    "serve-static": "^1.9.2"
   },
   "engines": {
     "node": "0.12.2"
