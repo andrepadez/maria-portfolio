@@ -4,7 +4,7 @@ var application = require('./application/application.controller');
 
 var isDevelopment = ~window.location.host.indexOf('localhost');
 
-window.hostName = isDevelopment? 'http://localhost:3001' : '//' + window.hostName;
+window.hostName = isDevelopment? 'http://localhost:3001' : '//' + window.location.host;
 var CONFIGURATION_URL = window.hostName + '/get-configuration';
 
 
