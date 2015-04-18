@@ -4,7 +4,7 @@
   "description": "Portfolio for Maria Ogliastri",
   "main": "server/index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server/index.js"
   },
   "devDependencies": {
     "bootstrap": "^3.3.2",
