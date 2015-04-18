@@ -7,7 +7,7 @@ ProjectsListView.prototype.constructor = ProjectsListView;
 var projectsListView = module.exports = new ProjectsListView();
 
 ProjectsListView.prototype.init = function(controller){
-    $scope = controller; console.log($scope.$config);
+    $scope = controller;
     //returns the promise created in templator.render
     return this.render($scope.$wrapper, $scope.$config)
         .then( registerDOM )

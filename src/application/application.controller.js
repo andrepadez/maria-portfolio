@@ -9,9 +9,10 @@ var application = module.exports = new Application();
 
 Application.prototype.init = function(config, wrapper){
 	this.$config = config || {};
+    console.log('application config', config);
     this.$wrapper = wrapper || document.body;
     return view.init(this)
-        .then( projectsList.init.bind(projectsList, this, this.$config.projects) )
+        .then( projectsList.init.bind(projectsList, this, this.$config) )
         .then( projectDisplay.init.bind(projectsList, this) )
         .then( view.renderPage.bind(view, 'about') );
 };

@@ -1,4 +1,9 @@
 {
+    "contact": {
+        "address":"Fagelstraat 10H 1052 GB Amsterdam",
+        "phone": "+31642079883",
+        "email": "info@mariagraciaogliastri.com"
+    },
     "projects": [
         {
             "id": "1",
