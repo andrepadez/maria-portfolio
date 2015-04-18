@@ -2,7 +2,10 @@ var pubsub = require('organic-lib/pubsub');
 var ajax = require('organic-lib/ajax');
 var application = require('./application/application.controller');
 
-var CONFIGURATION_URL = 'http://localhost:3001/get-configuration';
+var isDevelopment = ~window.location.host.indexOf('localhost');
+
+window.hostName = isDevelopment? 'http://localhost:3001' : '//' + window.hostName;
+var CONFIGURATION_URL = window.hostName + '/get-configuration';
 
 
 ajax.getJSON( CONFIGURATION_URL )
