@@ -1,0 +1,58 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+.projects-list .project-list-item .description {
+  display: none;
+}
+.projects-list .project-list-item:hover > .description {
+  display: block;
+}
+
+.project-container {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  height: 100%;
+}
+.project-container .slide {
+  margin-right: 10px;
+  height: 90%;
+  display: inline-block;
+}
+.project-container .slide .slide-img, .project-container .slide iframe {
+  height: 90%;
+}
+.project-container .slide label {
+  display: block;
+}
+.project-container .paging {
+  text-align: center;
+}
+.project-container .paging span {
+  margin-right: 3px;
+}
+
+/*# sourceMappingURL=maria-ogliastri-portfolio.css.map */
