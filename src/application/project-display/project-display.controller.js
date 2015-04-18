@@ -5,6 +5,8 @@ var ProjectDisplay = function(){};
 ProjectDisplay.prototype.constructor = ProjectDisplay;
 var projectDisplay = module.exports = new ProjectDisplay();
 
+var currentProject = null;
+
 ProjectDisplay.prototype.init = function(parentScope, config, wrapper){
     this.$parentScope = parentScope;
     this.$config = config || {};
@@ -24,6 +26,7 @@ var registerNotificationInterests = function(){
 var notificationHandler = function(message, payload){
     switch(message){
         case 'project changed':
+            currentProject = payload.project;
             view.renderProject( payload.project )
                 .then(
                     function(){},
@@ -32,3 +35,4 @@ var notificationHandler = function(message, payload){
             break;
     }
 };
+
