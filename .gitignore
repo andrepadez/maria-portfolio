@@ -1,4 +1,5 @@
 .sass-cache
+images/
 node_modules/
 testem.log
 npm-debug.log

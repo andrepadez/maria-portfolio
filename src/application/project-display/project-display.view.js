@@ -18,16 +18,16 @@ ProjectDisplayView.prototype.renderProject = function(project){
     var locals = {
         project: project
     };
-    var isUncleNelson = project.title !== 'A Monument to Uncle Nelson';
+    var isUncleNelson = project.title === 'A Monument to Uncle Nelson';
     var templateURL = isUncleNelson? 
-      'project-display.html': 'project-display-nelson.html';
+      'project-display-nelson.html' : 'project-display.html';
 
     return templator.empty($scope.$wrapper)
         .then( templator.render.bind(templator, templateURL, locals, $scope.$wrapper) )
         .then( registerDOM )
         .then( function(){
           if(isUncleNelson){
-            changeSlide.bind(1); 
+            changeSlide(1); 
           }
         });
 };
