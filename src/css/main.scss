@@ -1,9 +1,16 @@
+@font-face {
+	font-family: "Grotesque";
+	src: url("./font.otf");
+}
+
+
 html {
 	height: 100%;
 }
 
 body {
 	height: 100%;
+	font-family: "Grotesque";
 }
 
 ul {
@@ -40,28 +47,53 @@ li {
     overflow-x: scroll;
     overflow-y: hidden;
     position: relative;
-    height: 100%;
+    height: 90vh;
 	.slide {
-	    margin-right: 10px;
-	    height: 90%;
+	    padding-right: 10px;
+	    height: 85vh;
 	    display: inline-block;
-
-	    .slide-img, iframe {
-	        height: 90%;
-	    }
-	    iframe {
-
-	    }
-
-	    label {
-	        display: block;
+	    audio {
+	    	display: block;
+	    	width: 100%;
 	    }
 	}
 
+	.about-sections {
+		width: 50vw;
+	}
+
+	.article-wrapper article {
+		width: 50%;
+		float: left;
+	}
+	
 	.paging {
 	    text-align: center;
 	    span {
 	        margin-right: 3px;
 	    }
+	}
+
+	.slide-img {
+		display: inline-block;
+		height: 85vh;
+	}
+	.with-mp3 {
+		height: 80vh;
+	}
+	.slide-label {
+		display: block;
+		text-align: center;
+		padding: 1em;
+	}
+	.slide-img > img {
+		height: 100%;
+	}
+}
+
+.slide.vimeo {
+	iframe {
+		height: 80vh;
+		width: 160vh;
 	}
 }

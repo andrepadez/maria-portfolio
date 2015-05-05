@@ -2,40 +2,43 @@
   <h1>Maria Gracia Ogliastri</h1>
   <h2>About</h2>
 </header>
+<section class="about-wrapper col-sm-2">
+  <section class="education about-sections">
+    <h3>Education</h3>
+    {% for course in education %}
+      <article>
+        <div class="school">{{course.school}}.</div>
+        <div class="degree">{{course.degree}}.</div>
+        <div class="date">{{course.date}}.</div>
+      </article>
+    {% endfor %}
+  </section>
 
-<section class="education">
-  <h3>Education</h3>
-  {% for course in education %}
-    <article>
-      <span class="school">{{course.school}}. </span>
-      <span class="degree">{{course.degree}}. </span>
-      <span class="date">{{course.date}}.</span>
-    </article>
-  {% endfor %}
-</section>
+  {% if exhibitions.solo.length > 0 %}
+  <section class="solo-exhibition about-sections">
+    <h3>Solo Exhibitions</h3>
+    {% for exhibition in exhibitions.solo %}
+      <article>
+        <div class="name">{{exhibition.name}}</div>
+        <div class="location">{{exhibition.location}}</div>
+        <div class="date">{{exhibition.date}}</div>
+      </article>
+    {% endfor %}
+  </section>
+  {% endif %}
 
-{% if exhibitions.solo.length > 0 %}
-<section class="education">
-  <h3>Group Exhibitions</h3>
-  {% for exhibition in exhibitions.solo %}
-    <article>
-      <div class="name">{{exhibition.name}}</div>
-      <div class="location">{{exhibition.location}}</div>
-      <div class="date">{{exhibition.date}}</div>
-    </article>
-  {% endfor %}
+  {% if exhibitions.group.length > 0 %}
+  <section class="group-exhibition about-sections">
+    <h3>Group Exhibitions</h3>
+    <div class="article-wrapper">
+    {% for exhibition in exhibitions.group %}
+      <article>
+        <div class="name">{{exhibition.name}}</div>
+        <div class="location">{{exhibition.location}}</div>
+        <div class="date">{{exhibition.date}}</div>
+      </article>
+    {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 </section>
-{% endif %}
-
-{% if exhibitions.group.length > 0 %}
-<section class="education">
-  <h3>Group Exhibitions</h3>
-  {% for exhibition in exhibitions.group %}
-    <article>
-      <div class="name">{{exhibition.name}}</div>
-      <div class="location">{{exhibition.location}}</div>
-      <div class="date">{{exhibition.date}}</div>
-    </article>
-  {% endfor %}
-</section>
-{% endif %}

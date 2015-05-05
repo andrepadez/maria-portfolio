@@ -1,9 +1,14 @@
+@font-face {
+  font-family: "Grotesque";
+  src: url("./font.otf");
+}
 html {
   height: 100%;
 }
 
 body {
   height: 100%;
+  font-family: "Grotesque";
 }
 
 ul {
@@ -35,24 +40,49 @@ li {
   overflow-x: scroll;
   overflow-y: hidden;
   position: relative;
-  height: 100%;
+  height: 90vh;
 }
 .project-container .slide {
-  margin-right: 10px;
-  height: 90%;
+  padding-right: 10px;
+  height: 85vh;
   display: inline-block;
 }
-.project-container .slide .slide-img, .project-container .slide iframe {
-  height: 90%;
-}
-.project-container .slide label {
+.project-container .slide audio {
   display: block;
+  width: 100%;
+}
+.project-container .about-sections {
+  width: 50vw;
+}
+.project-container .article-wrapper article {
+  width: 50%;
+  float: left;
 }
 .project-container .paging {
   text-align: center;
 }
 .project-container .paging span {
   margin-right: 3px;
+}
+.project-container .slide-img {
+  display: inline-block;
+  height: 85vh;
+}
+.project-container .with-mp3 {
+  height: 80vh;
+}
+.project-container .slide-label {
+  display: block;
+  text-align: center;
+  padding: 1em;
+}
+.project-container .slide-img > img {
+  height: 100%;
+}
+
+.slide.vimeo iframe {
+  height: 80vh;
+  width: 160vh;
 }
 
 /*# sourceMappingURL=maria-ogliastri-portfolio.css.map */
