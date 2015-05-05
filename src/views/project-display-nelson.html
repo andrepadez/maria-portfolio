@@ -5,14 +5,17 @@
                 <iframe src="//player.vimeo.com/video/{{slide.vimeoId}}" frameborder="0" 
                     webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             {% elseif slide.type === 'image' %}
-                <img class="slide-img" src="{{slide.url}}" alt="{{slide.label}}">
-                <label>{{slide.label}} {{data}}</label>
                 {% if slide.mp3 %}
+                    <img class="slide-img with-mp3" src="{{slide.url}}" alt="{{slide.label}}">
+                    <label>{{slide.label}} {{data}}</label>
                     <audio controls preload="none" style="width:480px;">
                         <source src="{{slide.mp3.m4a}}" type="audio/mp4" />
                         <source src="{{slide.mp3.ogg}}" type="audio/ogg" />
                         <p>Your browser does not support HTML5 audio.</p>
                     </audio>
+                {% else %}
+                    <img class="slide-img" src="{{slide.url}}" alt="{{slide.label}}">
+                    <label>{{slide.label}} {{data}}</label>
                 {% endif %}
 
             {% endif %}
