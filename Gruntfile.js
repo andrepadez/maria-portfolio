@@ -13,7 +13,8 @@ module.exports = function(grunt){
         copy: globals.copy,
         browserSync: globals.browsersync,
         watch: globals.watch,
-        bgShell: globals.bgshell
+        bgShell: globals.bgshell,
+        imagemin: globals.imagemin
     });
 
     grunt.loadNpmTasks('grunt-browserify');
@@ -25,6 +26,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-bg-shell');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     
     grunt.registerTask('dev', ['build:dev', 'browserSync', 'bgShell']);
 

@@ -7,12 +7,14 @@
             {% elseif slide.type === 'image' %}
                 <img class="slide-img" src="{{slide.url}}" alt="{{slide.label}}">
                 <label>{{slide.label}} {{data}}</label>
-            {% elseif slide.type === 'mp3' %}
-                <audio controls preload="none" style="width:480px;">
-                    <source src="{{slide.m4a}}" type="audio/mp4" />
-                    <source src="{{slide.ogg}}" type="audio/ogg" />
-                    <p>Your browser does not support HTML5 audio.</p>
-                </audio>
+                {% if slide.mp3 %}
+                    <audio controls preload="none" style="width:480px;">
+                        <source src="{{slide.mp3.m4a}}" type="audio/mp4" />
+                        <source src="{{slide.mp3.ogg}}" type="audio/ogg" />
+                        <p>Your browser does not support HTML5 audio.</p>
+                    </audio>
+                {% endif %}
+
             {% endif %}
         </div>{% endfor %}
     </div>

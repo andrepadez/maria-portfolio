@@ -89,13 +89,11 @@
                 {
                     "label": "",
                     "type": "image",
-                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/5.jpg"
-                }, 
-                {
-                    "label": "",
-                    "type": "mp3",
-                    "m4a": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/trupapa_trupapa.mp3",
-                    "ogg": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/trupapa_trupapa.ogg"
+                    "url": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/5.jpg",
+                    "mp3": {
+                        "m4a": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/trupapa_trupapa.mp3",
+                        "ogg": "https://s3.eu-central-1.amazonaws.com/maria.porfolio/nelson/trupapa_trupapa.ogg"
+                    }
                 }
             ]
         },
