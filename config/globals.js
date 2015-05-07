@@ -10,7 +10,8 @@ var config = module.exports = {
 
         // production build output folders
         target: { 
-            dev   : 'dist/dev/'
+            dev   : 'dist/dev/',
+            prod  : 'dist/prod/'
         }
     }
 };

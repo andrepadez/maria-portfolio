@@ -6,41 +6,44 @@ var pkg = grunt.file.readJSON('./package.json');
 
 var modulesViewConfig = { files: [] };
 
-module.exports = {
-    html: {
+var copy = module.exports = {
+    dev: {
         files: [
             {
                 expand: true,
                 cwd: '<%= config.project.root %>',
-                src: ['**/*.html', 'index.html'],
+                src: ['**/*.html', '!index.html', '!index-prod.html', 'fonts/**/*'],
                 dest: '<%= config.target.dev %>'
+            },
+            {
+                expand: true,
+                cwd: 'node_modules/bootstrap/dist/',
+                src: [
+                    '**/*.*'
+                ],
+                dest: '<%= config.target.dev %>bootstrap'
             }
         ]
     },
-    styles: {
+    prod: {
         files: [
             {
                 expand: true,
-                cwd: 'node_modules/oet-editor-styles/',
-                src: [
-                    '**/*.*',
-                    '!**/*.scss',
-                    '!css/',
-                    '!node_modules/'
-                ], 
-                dest: '<%= config.target.dev %>'
-            }, 
+                cwd: '<%= config.project.root %>',
+                src: ['**/*.html', '!index.html', '!index-prod.html', 'fonts/**/*'],
+                dest: '<%= config.target.prod %>'
+            },
             {
                 expand: true,
-                cwd: 'node_modules/oet-editor-styles/css/',
+                cwd: 'node_modules/bootstrap/dist/',
                 src: [
-                    '**/*.*',
-                    '!**/*.scss'
-                ], 
-                dest: '<%= config.target.dev %>'
+                    '**/*.*'
+                ],
+                dest: '<%= config.target.prod %>bootstrap'
             }
         ]
-    }, 
+    },
+    
     modulesViews: modulesViewConfig
 };
 
@@ -59,11 +62,3 @@ module.exports = {
     });
 })();
 
-module.exports.bootstrap = {
-    expand: true,
-    cwd: 'node_modules/bootstrap/dist/',
-    src: [
-        '**/*.*'
-    ], 
-    dest: '<%= config.target.dev %>/bootstrap'
-}

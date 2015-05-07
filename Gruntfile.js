@@ -37,13 +37,15 @@ module.exports = function(grunt){
         switch(env){
             case 'dev': 
                 grunt.task.run('clean:dev');
-                grunt.task.run('copy');
-                grunt.task.run('sass:dev');
+                grunt.task.run('copy:dev');
                 grunt.task.run('replace:dev');
+                grunt.task.run('sass:dev');
                 grunt.task.run('browserify:dev');
                 break;
             case 'prod': 
-                
+                grunt.task.run('clean:prod');
+                grunt.task.run('copy:prod');
+                grunt.task.run('replace:prod');
                 break;
             default: 
                 throw Error('env must be dev or prod');
