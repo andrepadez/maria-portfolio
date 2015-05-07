@@ -3,9 +3,9 @@ var path = require('path')
   , serveStatic = require('serve-static')
   , configManager = require('./configuration-manager');
 
-var app = express(); console.log(path.join( __dirname, '../dist/dev'))
+var app = express();
 app.set('port', (process.env.PORT || 3001));
-app.use( serveStatic( path.join( __dirname, '../dist/dev') ) );
+app.use( serveStatic( path.join( __dirname, '../dist/prod') ) );
 
 app.listen( app.get('port'), function(){
 	console.log('listening on port ', app.get('port'));

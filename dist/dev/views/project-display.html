@@ -1,0 +1,23 @@
+<div style="text-align:center">
+    {% for slide in project.slides %}
+        {% if slide.type === 'vimeo' %}
+        <div class="slide vimeo">
+            <iframe class="" src="//player.vimeo.com/video/{{slide.vimeoId}}" frameborder="0" 
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+            {% elseif slide.type === 'image' %}
+            <div class="slide-img ">
+                <img src="{{slide.url}}" alt="{{slide.label}}">
+                <label class="slide-label">{{slide.label}} {{data}}</label>
+            </div>
+            {% elseif slide.type === 'mp3' %}
+            <div class="slide-mp3">
+                <audio controls preload="none" style="width:480px;">
+                    <source src="{{slide.m4a}}" type="audio/mp4" />
+                    <source src="{{slide.ogg}}" type="audio/ogg" />
+                    <p>Your browser does not support HTML5 audio.</p>
+                </audio>
+            </div>
+            {% endif %}
+    {% endfor %}
+</div>

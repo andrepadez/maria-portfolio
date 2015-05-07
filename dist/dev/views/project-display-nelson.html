@@ -1,0 +1,29 @@
+<div>
+    <div>
+        {% for slide in project.slides %}<div class="slide nelson hidden" data-index="{{loop.index}}">
+            {% if slide.type === 'vimeo' %}
+                <iframe src="//player.vimeo.com/video/{{slide.vimeoId}}" frameborder="0" 
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {% elseif slide.type === 'image' %}
+                {% if slide.mp3 %}
+                    <img class="slide-img with-mp3 nelson" src="{{slide.url}}" alt="{{slide.label}}">
+                    <label>{{slide.label}} {{data}}</label>
+                    <audio controls preload="none">
+                        <source src="{{slide.mp3.m4a}}" type="audio/mp4" />
+                        <source src="{{slide.mp3.ogg}}" type="audio/ogg" />
+                        <p>Your browser does not support HTML5 audio.</p>
+                    </audio>
+                {% else %}
+                    <img class="slide-img nelson" src="{{slide.url}}" alt="{{slide.label}}">
+                    <label>{{slide.label}} {{data}}</label>
+                {% endif %}
+
+            {% endif %}
+        </div>{% endfor %}
+    </div>
+    <div class="paging">
+        {% for slide in project.slides %}
+            <a href="#" data-slide="{{loop.index}}">{{loop.index}}</a>
+        {% endfor %}
+    </div>
+</div>

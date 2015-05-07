@@ -6,6 +6,7 @@ module.exports = function(grunt){
         pkg: grunt.file.readJSON('package.json'),
         config: globals.config,
         browserify: globals.browserify,
+        uglify: globals.uglify,
         sass: globals.sass,
         jshint: globals.jshint,
         clean: globals.clean,
@@ -18,6 +19,7 @@ module.exports = function(grunt){
     });
 
     grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -46,6 +48,8 @@ module.exports = function(grunt){
                 grunt.task.run('clean:prod');
                 grunt.task.run('copy:prod');
                 grunt.task.run('replace:prod');
+                grunt.task.run('sass:prod');
+                grunt.task.run('uglify:prod');
                 break;
             default: 
                 throw Error('env must be dev or prod');
