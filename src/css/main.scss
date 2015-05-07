@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Grotesque";
-	src: url("./font.otf");
+	src: url("./Grotesque.otf");
 }
 
 
@@ -33,7 +33,7 @@ li {
 .projects-list {
 	.project-list-item {
 		.description {
-			display: none;	
+			display: none;
 		}
 		
 		&:hover > .description{
@@ -44,18 +44,24 @@ li {
 
 .project-container {
 	white-space: nowrap;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    position: relative;
-    height: 90vh;
+  overflow-x: scroll;
+  overflow-y: auto;
+  position: relative;
+  height: 90vh;
+
 	.slide {
-	    padding-right: 10px;
-	    height: 85vh;
-	    display: inline-block;
-	    audio {
-	    	display: block;
-	    	width: 100%;
-	    }
+    padding-right: 10px;
+    height: 85vh;
+    display: inline-block;
+    audio {
+    	display: block;
+    	width: 100%;
+    }
+	}
+
+	.slide.nelson {
+		display: block;
+		text-align: center;
 	}
 
 	.about-sections {
@@ -63,6 +69,7 @@ li {
 	}
 
 	.article-wrapper article {
+		margin-bottom: 1.5em;
 		width: 50%;
 		float: left;
 	}

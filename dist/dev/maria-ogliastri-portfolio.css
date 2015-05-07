@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Grotesque";
-  src: url("./font.otf");
+  src: url("./Grotesque.otf");
 }
 html {
   height: 100%;
@@ -38,7 +38,7 @@ li {
 .project-container {
   white-space: nowrap;
   overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-y: auto;
   position: relative;
   height: 90vh;
 }
@@ -51,10 +51,15 @@ li {
   display: block;
   width: 100%;
 }
+.project-container .slide.nelson {
+  display: block;
+  text-align: center;
+}
 .project-container .about-sections {
   width: 50vw;
 }
 .project-container .article-wrapper article {
+  margin-bottom: 1.5em;
   width: 50%;
   float: left;
 }

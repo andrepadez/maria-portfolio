@@ -1,6 +1,6 @@
 <div>
     <div>
-        {% for slide in project.slides %}<div class="slide hidden" data-index="{{loop.index}}">
+        {% for slide in project.slides %}<div class="slide nelson hidden" data-index="{{loop.index}}">
             {% if slide.type === 'vimeo' %}
                 <iframe src="//player.vimeo.com/video/{{slide.vimeoId}}" frameborder="0" 
                     webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
